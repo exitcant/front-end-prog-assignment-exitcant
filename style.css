@@ -1,51 +1,123 @@
-.cart {
-    background-color:black;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+/* Product Container */
+.product-container {
+    width: 700px;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+/* Sale Badge */
+.sale-badge {
+    background-color: red;
     color: white;
-    padding: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border-radius: 3px;
+}
+/* Product Image */
+.product-image img {
     width: 100%;
+    height: auto;
+}
+/* Product Details */
+.product-details {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+.product-info {
+    flex: 1;
+}
+.product-info h1 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.price {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+.free-shipping {
+    font-size: 12px;
+    color: gray;
+    margin-top: -5px;
+}
+.description {
+    margin-top: 10px;
+    line-height: 1.6;
+    color: #333;
+}
+.description a {
+    color: #3498db;
     text-decoration: none;
-    margin: 4px 2px;
-    cursor: pointer;
 }
-.h3,.description{
-    text-align: right;
+.description a:hover {
+    text-decoration: underline;
 }
-.home{
-    border: 2px solid black;
-    margin: auto;
-    width: 70%;
+/* Color Options */
+.color-options {
+    margin-top: 10px;
+    display: flex;
+    gap: 8px;
 }
-
-.cart:hover{
-    background-color: white;
-    color:black;
-    border: 2px solid black;
+.color-options span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #000;
 }
-.container{
-    display: inline-flex;
-    background-color: white;
+/* Product Detail List */
+.product-detail-list {
+    flex: 1;
 }
-.marker{
-    width: 14px;
-    height: 14px;
-    margin: 2px 3px;
+.product-detail-list h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
-.black{
-    background-color: black;
-
+.product-detail-list ul {
+    list-style-type: none;
+    padding-left: 0;
 }
-.blue{
-background-color: blue;
+.product-detail-list li {
+    margin-bottom: 5px;
+    color: #555;
 }
-.red{
-background-color: red;
+/* Add to Cart Button */
+.add-to-cart {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
-.yellow{
-    background-color: yellow;
-}
-.green{
-    background-color: greenyellow;
-}
-.brown{
-    background-color: brown;
+.add-to-cart:hover {
+    background-color: #333;
 }
